@@ -6,24 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/style.css"> -->
-    <title>Canvas</title>
+    <title>Animations</title>
     <style>
         body {
             margin: 0;
             padding: 0;
         }
 
-        canvas {
-            display: block;
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+        }
+
+        button:hover {
+            background-color: green;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <canvas id="canvas"></canvas>
-    <% for (var js in htmlWebpackPlugin.files.js) { %>
-        <script src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
-        <% } %>
+    <div class="wrapper">
+        <button>Hover Me</button>
+    </div>
 </body>
 
 </html>
