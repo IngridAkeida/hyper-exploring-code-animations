@@ -26,18 +26,27 @@
             color: white;
             padding: 1rem 2rem;
             border-radius: 1rem;
+            transform: rotate(0) scale(1);
+            transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+            transition-delay: var(--delay);
         }
 
-        button:hover {
-            background-color: green;
-            color: white;
+        .wrapper:hover button {
+            background-color: pink;
+            color: green;
+            transform: rotate(var(--rotation)) scale(1.9);
+            transition: transform 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <button>Hover Me</button>
+
+        <button style="--delay: 0s; --rotation: 188deg">Hover Me</button>
+        <button style="--delay: 0.1s; --rotation: -180deg">Hover Me</button>
+        <button style="--delay: 0.2s; --rotation: 100deg">Hover Me</button>
+        <button style="--delay: 0.3s ; --rotation: 45deg">Hover Me</button>
     </div>
 </body>
 
