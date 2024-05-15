@@ -15,6 +15,7 @@
 
         .wrapper {
             position: relative;
+            background-color: black;
         }
 
         button {
@@ -32,7 +33,15 @@
 
         section {
             width: 100%;
-            height: 100svh;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 8vw;
         }
 
         .blue {
@@ -50,16 +59,39 @@
         .black {
             background-color: black;
         }
+
+        .split-container {
+            overflow: hidden;
+            display: block
+        }
+
+        .split-container span {
+            display: block;
+
+        }
+
+        .letters span {
+            display: inline-block;
+            transform: translateY(100%);
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <section class="black">
+            <h2>Hello</h2>
         </section>
-        <section class="red"></section>
+        <section class="red">
+            <h2>
+                <span class="split-container">
+                    <span class="letters">Reveal Text</span>
+                </span>
+            </h2>
+        </section>
         <section></section>
-        <section class="blue"></section>
+        <section class=" blue">
+        </section>
         <section class="green"></section>
     </div>
 </body>
